@@ -174,5 +174,9 @@ class Router extends LumenRouter {
   public function getDomainParam ($name, $default = null) {
     return Arr::get($this->getDomainParams(), $name, $default);
   }
+
+  public function App() {
+    return $this->app;
+  }
 }
 

@@ -21,7 +21,7 @@ class Route {
     if (!self::$_route) {
       self::$_route = new Router($app);
     }
-    class_alias(__class__, 'Route');
+    //class_alias(__class__, 'Route');
     return self::$_route;
   }
 

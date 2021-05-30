@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'zh'),
 
     /*
     |--------------------------------------------------------------------------
@@ -107,5 +107,53 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
+
+    // 设置路由基础命名空间
+    'namespace' => env('APP_NAMESPACE', 'App\\Http\\Controllers'),
+
+    // 加载配置文件
+    'configure' => [
+      
+    ],
+
+    // 服务注册
+    'providers' => [
+    ],
+
+    // 注册中间件
+    'middleware' => [
+    
+    ],
+
+    // 注册路由中间件
+    'routeMiddleware' => [
+    ],
+
+    // 门面注册
+    'aliases' => [
+      'Model'   => Illuminate\Database\Eloquent\Model::class,
+      'Request' => Illuminate\Http\Request::class,
+      'Config'  => Illuminate\Support\Facades\Config::class,
+      'Storage' => Illuminate\Support\Facades\Storage::class,
+      'View'    => Illuminate\Support\Facades\View::class,
+      // auth && JWT
+      'Auth'    => Illuminate\Support\Facades\Auth::class,
+      'JWT'     => Lex\Facades\JWT::class,
+
+      // session && cookie
+      'session' => Illuminate\Session\SessionManager::class,
+      'cookie'  => Illuminate\Support\Facades\Cookie::class,
+    ],
+
+    // blade 配置
+    'blade' => [
+      
+    ],
+
+    // 运行模块配置
+    'modules' => [
+      // 'web' => app_path('Http/Web'),
+      // 'api' => app_path('Http/Api')
+    ]
 
 ];
