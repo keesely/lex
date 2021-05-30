@@ -1,0 +1,26 @@
+{
+  "name": "keesely/lex",
+  "description": "Lumen Extra",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "kee",
+      "email": "chinboy2012@gmail.com"
+    }
+  ],
+  "require": {
+    "php" : "^7.2.5|^8.0",
+    "doctrine/dbal" : "~2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lex\\" : "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ],
+    "minimum-stability": "dev",
+    "version": "1.0.1"
+  }
+}
